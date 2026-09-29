@@ -1,0 +1,248 @@
+[gd_scene format=3 uid="uid://ccps8vjdl03xx"]
+
+[ext_resource type="PackedScene" uid="uid://bsmha8lnl4ecl" path="res://topo.tscn" id="1_2kjmt"]
+[ext_resource type="Script" uid="uid://dijjp45jwnuwj" path="res://wam.gd" id="1_8rsgo"]
+[ext_resource type="Texture2D" uid="uid://lbvrg82qd3sf" path="res://WYR grass.png" id="1_xwmom"]
+[ext_resource type="Texture2D" uid="uid://oraa16td5tht" path="res://Pipes Sprite.png" id="2_44e1j"]
+[ext_resource type="FontFile" uid="uid://cq5lckaay85th" path="res://ARCADECLASSIC.TTF" id="5_hkakk"]
+[ext_resource type="Texture2D" uid="uid://357u885qegm6" path="res://WYR SG.png" id="6_vttko"]
+[ext_resource type="Texture2D" uid="uid://cntcvx8jcwp5g" path="res://WYR go.png" id="7_a2u4f"]
+[ext_resource type="Texture2D" uid="uid://c3k8o5jffwnju" path="res://WYR ta.png" id="8_camht"]
+[ext_resource type="Texture2D" uid="uid://cyifs57cnpnt4" path="res://WYR cgrs.jpg" id="9_otxhq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8rsgo"]
+font = ExtResource("5_hkakk")
+font_size = 29
+shadow_size = 4
+shadow_color = Color(0, 0, 0, 0.40392157)
+shadow_offset = Vector2(1.045, 1.065)
+
+[sub_resource type="LabelSettings" id="LabelSettings_xepy2"]
+font = ExtResource("5_hkakk")
+font_size = 29
+shadow_size = 6
+shadow_color = Color(0, 0, 0, 0.34901962)
+shadow_offset = Vector2(1.115, 1.095)
+
+[sub_resource type="LabelSettings" id="LabelSettings_8dto7"]
+line_spacing = 10.0
+font = ExtResource("5_hkakk")
+font_size = 62
+font_color = Color(0.72400117, 0.9384794, 0.6402606, 1)
+shadow_size = 8
+shadow_color = Color(0, 0.13333334, 0, 0.8352941)
+shadow_offset = Vector2(0.35, 1.06)
+
+[sub_resource type="LabelSettings" id="LabelSettings_pv86h"]
+font = ExtResource("5_hkakk")
+font_size = 100
+shadow_size = 16
+shadow_color = Color(0, 0, 0, 0.57254905)
+shadow_offset = Vector2(1.42, 2.415)
+
+[node name="wam" type="Node2D" unique_id=1790900205]
+script = ExtResource("1_8rsgo")
+
+[node name="WyrGrass" type="Sprite2D" parent="." unique_id=1281950976]
+position = Vector2(574, 329)
+scale = Vector2(0.6762101, 0.6762101)
+texture = ExtResource("1_xwmom")
+
+[node name="topo" parent="." unique_id=994233780 instance=ExtResource("1_2kjmt")]
+position = Vector2(-2.3841858e-07, 48)
+scale = Vector2(0.36362496, 0.36362496)
+
+[node name="topo2" parent="." unique_id=154050606 instance=ExtResource("1_2kjmt")]
+position = Vector2(360, 48)
+scale = Vector2(0.36362496, 0.36362496)
+
+[node name="topo3" parent="." unique_id=1120755999 instance=ExtResource("1_2kjmt")]
+position = Vector2(696, 48.000004)
+scale = Vector2(0.36362496, 0.36362496)
+
+[node name="topo4" parent="." unique_id=1483452004 instance=ExtResource("1_2kjmt")]
+position = Vector2(-1.999939, 324.99997)
+scale = Vector2(0.36362496, 0.36362496)
+
+[node name="topo5" parent="." unique_id=110495971 instance=ExtResource("1_2kjmt")]
+position = Vector2(360, 336)
+scale = Vector2(0.36362496, 0.36362496)
+
+[node name="topo6" parent="." unique_id=267744735 instance=ExtResource("1_2kjmt")]
+position = Vector2(704, 336)
+scale = Vector2(0.36362496, 0.36362496)
+
+[node name="Pipe" type="Sprite2D" parent="." unique_id=1042464702]
+position = Vector2(240.00002, 232.00002)
+scale = Vector2(0.08395105, 0.08395105)
+texture = ExtResource("2_44e1j")
+
+[node name="Pipe2" type="Sprite2D" parent="." unique_id=19625863]
+position = Vector2(600, 232.00002)
+scale = Vector2(0.08395105, 0.08395105)
+texture = ExtResource("2_44e1j")
+
+[node name="Pipe3" type="Sprite2D" parent="." unique_id=1171880616]
+position = Vector2(242.00006, 514)
+scale = Vector2(0.08395105, 0.08395105)
+texture = ExtResource("2_44e1j")
+
+[node name="Pipe4" type="Sprite2D" parent="." unique_id=23432739]
+position = Vector2(600, 520)
+scale = Vector2(0.08395105, 0.08395105)
+texture = ExtResource("2_44e1j")
+
+[node name="Pipe5" type="Sprite2D" parent="." unique_id=1361282738]
+position = Vector2(944.00006, 520)
+scale = Vector2(0.08395105, 0.08395105)
+texture = ExtResource("2_44e1j")
+
+[node name="Pipe6" type="Sprite2D" parent="." unique_id=2121937269]
+position = Vector2(936.00006, 232)
+scale = Vector2(0.08395105, 0.08395105)
+texture = ExtResource("2_44e1j")
+
+[node name="marcador" type="Label" parent="." unique_id=1981180565]
+texture_filter = 1
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 138.0
+offset_bottom = 56.0
+scale = Vector2(0.90343416, 0.96212703)
+text = "Points: 0"
+label_settings = SubResource("LabelSettings_8rsgo")
+
+[node name="gameclock" type="Timer" parent="." unique_id=1243168824]
+wait_time = 15.0
+one_shot = true
+
+[node name="timet" type="Label" parent="." unique_id=1539047720]
+offset_left = 1016.00006
+offset_top = 24.0
+offset_right = 1122.0
+offset_bottom = 64.0
+scale = Vector2(0.98596853, 1.0591329)
+text = "Time: 15"
+label_settings = SubResource("LabelSettings_xepy2")
+
+[node name="instructions" type="ColorRect" parent="." unique_id=1982487829]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(28.828766, 16.303665)
+color = Color(0, 0, 0, 0.5568628)
+
+[node name="inst wam" type="Label" parent="instructions" unique_id=1765571989]
+texture_filter = 1
+layout_mode = 0
+offset_left = 8.047518
+offset_top = 15.211301
+offset_right = 508.04752
+offset_bottom = 227.2113
+scale = Vector2(0.047949027, 0.060434777)
+text = "You have 
+15 seconds 
+to catch 20 moles"
+label_settings = SubResource("LabelSettings_8dto7")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="title wam" type="Label" parent="instructions" unique_id=142697174]
+texture_filter = 1
+layout_mode = 0
+offset_left = 6.1050134
+offset_top = 4.416185
+offset_right = 582.10504
+offset_bottom = 216.41618
+scale = Vector2(0.047949027, 0.060434777)
+text = "Whack A Mole"
+label_settings = SubResource("LabelSettings_pv86h")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="instructions" unique_id=1119513249]
+texture_filter = 1
+layout_mode = 0
+offset_left = 10.822523
+offset_top = 20.608862
+offset_right = 1975.8225
+offset_bottom = 1108.6089
+scale = Vector2(0.009752217, 0.018933551)
+text = "Play"
+icon = ExtResource("6_vttko")
+flat = true
+
+[node name="instructions_lvl2" type="ColorRect" parent="." unique_id=1447011541]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(28.828766, 16.303665)
+color = Color(0, 0, 0, 0.5568628)
+
+[node name="inst wam" type="Label" parent="instructions_lvl2" unique_id=430430641]
+texture_filter = 1
+layout_mode = 0
+offset_left = 8.047518
+offset_top = 15.211301
+offset_right = 508.04752
+offset_bottom = 227.2113
+scale = Vector2(0.047949027, 0.060434777)
+text = "You have 
+10 seconds 
+to catch 20 moles"
+label_settings = SubResource("LabelSettings_8dto7")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="title wam" type="Label" parent="instructions_lvl2" unique_id=655187587]
+texture_filter = 1
+layout_mode = 0
+offset_left = 6.1050134
+offset_top = 4.416185
+offset_right = 582.10504
+offset_bottom = 216.41618
+scale = Vector2(0.047949027, 0.060434777)
+text = "Whack A Mole"
+label_settings = SubResource("LabelSettings_pv86h")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="instructions_lvl2" unique_id=391195407]
+texture_filter = 1
+layout_mode = 0
+offset_left = 10.822523
+offset_top = 20.608862
+offset_right = 1975.8225
+offset_bottom = 1108.6089
+scale = Vector2(0.009752217, 0.018933551)
+text = "Play"
+icon = ExtResource("6_vttko")
+flat = true
+
+[node name="gameover" type="TextureRect" parent="." unique_id=2027663319]
+visible = false
+offset_left = -1.5258789e-05
+offset_right = 1920.0
+offset_bottom = 1080.0
+scale = Vector2(0.60036445, 0.60036445)
+texture = ExtResource("7_a2u4f")
+
+[node name="tryagain" type="Button" parent="gameover" unique_id=1578277296]
+layout_mode = 0
+offset_left = 786.1891
+offset_top = 666.26196
+offset_right = 2714.189
+offset_bottom = 1754.262
+scale = Vector2(0.18666567, 0.18666567)
+icon = ExtResource("8_camht")
+flat = true
+
+[node name="congrats" type="TextureRect" parent="." unique_id=263209419]
+visible = false
+offset_right = 1920.0
+offset_bottom = 1080.0
+scale = Vector2(0.59890854, 0.59890854)
+texture = ExtResource("9_otxhq")
+
+[connection signal="timeout" from="gameclock" to="." method="_on_gameclock_timeout"]
+[connection signal="pressed" from="instructions/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="instructions_lvl2/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="gameover/tryagain" to="." method="_on_tryagain_pressed"]

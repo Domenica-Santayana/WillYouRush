@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bsmha8lnl4ecl"]
+
+[ext_resource type="Texture2D" uid="uid://douqyf4xdwyxn" path="res://Mole Sprite.png" id="1_61n4o"]
+[ext_resource type="Script" uid="uid://bmnyk5ooc4qw5" path="res://topo.gd" id="1_gtbfk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xepy2"]
+size = Vector2(384, 347)
+
+[node name="topo" type="Area2D" unique_id=994233780]
+script = ExtResource("1_gtbfk")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1009488755]
+position = Vector2(665, 315)
+scale = Vector2(0.24062188, 0.24408683)
+texture = ExtResource("1_61n4o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=914644952]
+position = Vector2(664, 340.5)
+shape = SubResource("RectangleShape2D_xepy2")
+
+[node name="Timer" type="Timer" parent="." unique_id=1992702120]
+wait_time = 1.5
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

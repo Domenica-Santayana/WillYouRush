@@ -1,0 +1,163 @@
+[gd_scene format=3 uid="uid://cayw6tnh8omty"]
+
+[ext_resource type="Script" uid="uid://txbxtve7n0c2" path="res://quiz.gd" id="1_kninm"]
+[ext_resource type="Texture2D" uid="uid://bvlmgbod1t02x" path="res://WYR qz.png" id="2_i0i4q"]
+[ext_resource type="FontFile" uid="uid://cq5lckaay85th" path="res://ARCADECLASSIC.TTF" id="2_k7kv1"]
+[ext_resource type="Texture2D" uid="uid://357u885qegm6" path="res://WYR SG.png" id="4_hgkws"]
+[ext_resource type="Texture2D" uid="uid://cntcvx8jcwp5g" path="res://WYR go.png" id="4_ngcn3"]
+[ext_resource type="Texture2D" uid="uid://c3k8o5jffwnju" path="res://WYR ta.png" id="5_hgkws"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xepy2"]
+font = ExtResource("2_k7kv1")
+font_size = 102
+shadow_size = 7
+shadow_color = Color(0, 0, 0, 0.4862745)
+shadow_offset = Vector2(1.225, 1.825)
+
+[sub_resource type="LabelSettings" id="LabelSettings_qc24j"]
+font = ExtResource("2_k7kv1")
+font_size = 34
+
+[sub_resource type="LabelSettings" id="LabelSettings_8dto7"]
+font = ExtResource("2_k7kv1")
+font_size = 109
+shadow_size = 10
+shadow_color = Color(0.3882353, 0, 0, 0.4627451)
+shadow_offset = Vector2(2.5, 4)
+
+[sub_resource type="LabelSettings" id="LabelSettings_pv86h"]
+font = ExtResource("2_k7kv1")
+font_size = 65
+font_color = Color(1, 0.827451, 1, 1)
+
+[node name="quiz" type="Node2D" unique_id=1708966068]
+script = ExtResource("1_kninm")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=878755561]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.60289025, 0.60289025)
+texture = ExtResource("2_i0i4q")
+
+[node name="question" type="Label" parent="." unique_id=401599417]
+texture_filter = 1
+offset_left = 400.0
+offset_top = 56.0
+offset_right = 803.0
+offset_bottom = 193.0
+scale = Vector2(1.0265404, 1.0489494)
+text = "15 + 17 ="
+label_settings = SubResource("LabelSettings_xepy2")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button1" type="Button" parent="." unique_id=1056550624]
+texture_filter = 1
+offset_left = 63.999996
+offset_top = 256.0
+offset_right = 90.54714
+offset_bottom = 287.0368
+scale = Vector2(16.828938, 5.151541)
+autowrap_trim_flags = 0
+
+[node name="Button2" type="Button" parent="." unique_id=1510606242]
+texture_filter = 1
+offset_left = 64.0
+offset_top = 464.0
+offset_right = 90.54715
+offset_bottom = 495.0368
+scale = Vector2(16.828938, 5.151541)
+autowrap_trim_flags = 0
+
+[node name="Button4" type="Button" parent="." unique_id=872329785]
+texture_filter = 1
+offset_left = 639.99994
+offset_top = 256.0
+offset_right = 666.5471
+offset_bottom = 287.0368
+scale = Vector2(16.549995, 5.066154)
+autowrap_trim_flags = 0
+
+[node name="Button3" type="Button" parent="." unique_id=268813122]
+texture_filter = 1
+offset_left = 640.0
+offset_top = 464.0
+offset_right = 666.5472
+offset_bottom = 495.0368
+scale = Vector2(16.828938, 5.151541)
+autowrap_trim_flags = 0
+
+[node name="quizclock" type="Timer" parent="." unique_id=1450688781]
+wait_time = 5.0
+autostart = true
+
+[node name="TextoTiempoQuiz" type="Label" parent="." unique_id=12144903]
+offset_left = 1024.0
+offset_top = 32.0
+offset_right = 1129.0
+offset_bottom = 78.0
+text = "Time: 5"
+label_settings = SubResource("LabelSettings_qc24j")
+
+[node name="PantallaInicioQuiz" type="ColorRect" parent="." unique_id=23697590]
+offset_left = -16.0
+offset_right = 24.0
+offset_bottom = 39.51605
+scale = Vector2(29.360374, 16.53058)
+color = Color(0, 0, 0, 0.6313726)
+
+[node name="Label" type="Label" parent="PantallaInicioQuiz" unique_id=1432922325]
+texture_filter = 1
+layout_mode = 0
+offset_left = 13.89628
+offset_top = 5.3234677
+offset_right = 253.89629
+offset_bottom = 116.32347
+scale = Vector2(0.054970473, 0.054970473)
+text = "Quiz"
+label_settings = SubResource("LabelSettings_8dto7")
+
+[node name="Label2" type="Label" parent="PantallaInicioQuiz" unique_id=2090127579]
+layout_mode = 0
+offset_left = 8.719235
+offset_top = 13.550643
+offset_right = 720.71924
+offset_bottom = 217.55064
+scale = Vector2(0.033911794, 0.06442274)
+text = "Answer  math  questions
+in  less than
+5s"
+label_settings = SubResource("LabelSettings_pv86h")
+horizontal_alignment = 1
+autowrap_trim_flags = 0
+justification_flags = 0
+
+[node name="start" type="Button" parent="PantallaInicioQuiz" unique_id=67963064]
+layout_mode = 0
+offset_left = 6.5394263
+offset_top = 21.77782
+offset_right = 1934.5394
+offset_bottom = 1109.7778
+scale = Vector2(0.014643826, 0.017075373)
+icon = ExtResource("4_hgkws")
+flat = true
+
+[node name="PantallaGameOverQuiz" type="TextureRect" parent="." unique_id=1909317016]
+visible = false
+offset_right = 1920.0
+offset_bottom = 1080.0
+scale = Vector2(0.6017241, 0.6017241)
+texture = ExtResource("4_ngcn3")
+
+[node name="Button" type="Button" parent="PantallaGameOverQuiz" unique_id=294984025]
+layout_mode = 0
+offset_left = 717.937
+offset_top = 651.46136
+offset_right = 2645.9373
+offset_bottom = 1739.4614
+scale = Vector2(0.24928077, 0.24928077)
+icon = ExtResource("5_hgkws")
+flat = true
+
+[connection signal="pressed" from="PantallaInicioQuiz/start" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="PantallaGameOverQuiz/Button" to="." method="_on_button_pressed"]

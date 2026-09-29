@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bit5qcnijmjl2"]
+
+[ext_resource type="Texture2D" uid="uid://scfujv7bc6a3" path="res://WYR TPB.png" id="1_ak2if"]
+[ext_resource type="Script" uid="uid://doh4fukofvlxb" path="res://title_screen.gd" id="1_ig5kc"]
+[ext_resource type="Texture2D" uid="uid://357u885qegm6" path="res://WYR SG.png" id="2_ig5kc"]
+
+[node name="title-screen" type="Node2D" unique_id=1948465673]
+script = ExtResource("1_ig5kc")
+
+[node name="background" type="TextureRect" parent="." unique_id=543757665]
+offset_right = 1920.0
+offset_bottom = 1080.0
+scale = Vector2(0.60075736, 0.60075736)
+texture = ExtResource("1_ak2if")
+
+[node name="Start" type="Button" parent="background" unique_id=180759655]
+layout_mode = 0
+offset_left = 934.50525
+offset_top = 667.4908
+offset_right = 2862.5054
+offset_bottom = 1755.4907
+scale = Vector2(0.23790278, 0.32934397)
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 26
+icon = ExtResource("2_ig5kc")
+flat = true
+
+[connection signal="pressed" from="background/Start" to="." method="_on_start_pressed"]
