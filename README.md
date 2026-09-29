@@ -18,4 +18,8 @@ A fast-paced WarioWare style game developed in the Godot Engine, featuring a str
 ## Controls
 * Use the mouse to click on the moles and select the correct answers as quickly as possible!
 
+## Play it now
+https://dsc-217.itch.io/will-you-rush
+
 The question is **Will You Rush?**
+
